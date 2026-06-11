@@ -121,6 +121,13 @@ section > h2,
 }
 .col-class { width: 3.5rem; white-space: nowrap; }
 .col-date  { white-space: nowrap; }
+.schedule th:nth-child(4),
+.schedule th:nth-child(5),
+.schedule td:nth-child(4),
+.schedule td:nth-child(5) {
+  width: 5.5rem;
+  white-space: nowrap;
+}
 .schedule a { text-decoration: none; }
 .schedule tbody td:nth-child(4) a,
 .schedule tbody td:nth-child(5) a { font-weight: 400; }
