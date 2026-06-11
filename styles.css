@@ -114,10 +114,16 @@ section > h2,
   white-space: nowrap;
 }
 .schedule tbody th { font-weight: 400; }   /* class number marks structure: ink, never red */
-.schedule tbody th.col-class { font-weight: 700; font-size: 1.375rem; }
+.schedule tbody th.col-class {
+  font-family: var(--font-serif, Merriweather, Georgia, serif);
+  font-weight: 700;
+  font-size: 1.375rem;
+}
 .col-class { width: 3.5rem; white-space: nowrap; }
 .col-date  { white-space: nowrap; }
-.schedule a { font-weight: 700; text-decoration: none; }
+.schedule a { text-decoration: none; }
+.schedule tbody td:nth-child(4) a,
+.schedule tbody td:nth-child(5) a { font-weight: 400; }
 .schedule a::after { content: " ↗"; font-size: .7em; vertical-align: .3em; }
 .schedule a:hover,
 .schedule a:focus-visible { text-decoration: underline; }
