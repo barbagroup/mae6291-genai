@@ -12,16 +12,16 @@ body {
 }
 
 .wrap {
-  max-width: 52rem;
+  max-width: 56rem;
   margin-inline: auto;
   padding-inline: var(--space-8, 2rem);
 }
 
 /* Header / wordmark */
-.site-header { padding-block: var(--space-12, 3rem) var(--space-8, 2rem); }
+.site-header { padding-block: var(--space-12, 3rem) var(--space-8, 2rem); border-bottom: 1px solid var(--color-hairline, #EAEBE6); }
 .mark {
   font-family: var(--font-serif, Merriweather, Georgia, serif);
-  font-size: 1.375rem;
+  font-size: 1.5rem;
   line-height: 1.1;
   text-decoration: none;
   display: inline-block;
@@ -66,6 +66,8 @@ section > h2,
   gap: var(--space-2, .5rem) var(--space-6, 1.5rem);
   margin: 0;
   max-width: 44rem;
+  border: 1px solid var(--color-hairline, #EAEBE6);
+  padding: var(--space-4, 1rem) var(--space-6, 1.5rem);
 }
 .details dt {
   font-weight: 700;
@@ -85,6 +87,16 @@ section > h2,
   min-width: 46rem;            /* below this, the wrapper scrolls horizontally */
 }
 .schedule caption { caption-side: top; }
+.caption-sub {
+  display: block;
+  font-family: var(--font-sans, "Source Sans 3", system-ui, sans-serif);
+  font-size: var(--text-meta, .875rem);
+  font-weight: 400;
+  text-transform: none;
+  letter-spacing: normal;
+  color: var(--color-muted, #787876);
+  margin-top: var(--space-2, .5rem);
+}
 .schedule th,
 .schedule td {
   text-align: left;
@@ -97,14 +109,16 @@ section > h2,
   letter-spacing: var(--tracking-caps, .08em);
   font-size: var(--text-meta, .8125rem);
   font-weight: 700;
-  color: var(--color-muted, #787876);
-  border-bottom: 1px solid var(--color-ink, #181712);
+  color: var(--color-ink, #181712);
+  border-bottom: 2px solid var(--color-ink, #181712);
   white-space: nowrap;
 }
 .schedule tbody th { font-weight: 400; }   /* class number marks structure: ink, never red */
+.schedule tbody th.col-class { font-weight: 700; font-size: 1.375rem; }
 .col-class { width: 3.5rem; white-space: nowrap; }
 .col-date  { white-space: nowrap; }
 .schedule a { font-weight: 700; text-decoration: none; }
+.schedule a::after { content: " ↗"; font-size: .7em; vertical-align: .3em; }
 .schedule a:hover,
 .schedule a:focus-visible { text-decoration: underline; }
 .muted { color: var(--color-muted, #787876); }
@@ -118,8 +132,13 @@ section > h2,
   padding-block: var(--space-8, 2rem) var(--space-16, 4rem);
   font-size: var(--text-meta, .8125rem);
   color: var(--color-muted, #787876);
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: var(--space-4, 1rem);
 }
-.site-footer p { margin: 0 0 var(--space-2, .5rem); }
+.site-footer p { margin: 0; }
 
 /* Quality floor */
 a { color: var(--color-red, #CE2406); }
