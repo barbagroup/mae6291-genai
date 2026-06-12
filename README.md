@@ -13,6 +13,10 @@ Static course site for **MAE-6291: Generative AI for Engineering Research**.
 
 https://barbagroup.github.io/mae6291-genai/
 
+## Course journey
+
+![journey](./course_journey.svg)
+
 ## Copyright and License
 
 (c) Lorena A. Barba, 2026. Site and course content under CC-BY, code under BSD-3.
